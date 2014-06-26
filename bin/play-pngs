@@ -1,0 +1,9 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+my $dir = shift // '.';
+my $fps = shift // 20;
+
+system 'mplayer', "mf://$dir/*.png", '-mf', "fps=$fps", '-fs';
