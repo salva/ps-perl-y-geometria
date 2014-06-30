@@ -1,10 +1,4 @@
-# Perl, vectores, geometría,
-
-# problemas, algoritmos y arte
-
-# y todo lo demás
-
-# ...
+# Perl, vectores, geometría, problemas, algoritmos y arte y todo lo demás...
 
 Salvador Fandiño (sfandino@yahoo.com)
 
