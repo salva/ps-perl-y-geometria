@@ -1,79 +1,756 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Perl y Geometría : Perl, vectores, geometría, problemas, algoritmos y arte" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Perl y Geometría by salva</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Perl y Geometría</title>
   </head>
-
   <body>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/salva/ps-perl-y-geometria">View on GitHub</a>
+      <header>
+        <h1>Perl y Geometría</h1>
+        <p></p>
+      </header>
 
-          <h1 id="project_title">Perl y Geometría</h1>
-          <h2 id="project_tagline">Perl, vectores, geometría, problemas, algoritmos y arte</h2>
+      <div id="banner">
+        <span id="logo"></span>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/salva/ps-perl-y-geometria/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/salva/ps-perl-y-geometria/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+        <a href="https://github.com/salva/ps-perl-y-geometria" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/salva/ps-perl-y-geometria/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/salva/ps-perl-y-geometria/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h1>
+<a name="perl-vectores-geometr%C3%ADa-problemas-algoritmos-y-arte-y-todo-lo-dem%C3%A1s" class="anchor" href="#perl-vectores-geometr%C3%ADa-problemas-algoritmos-y-arte-y-todo-lo-dem%C3%A1s"><span class="octicon octicon-link"></span></a>Perl, vectores, geometría, problemas, algoritmos y arte y todo lo demás</h1>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>Salvador Fandiño (<a href="mailto:sfandino@yahoo.com">sfandino@yahoo.com</a>)</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+<p>Granada Perl Workshop - Junio 2014</p>
+
+<hr><h1>
+<a name="vector" class="anchor" href="#vector"><span class="octicon octicon-link"></span></a>Vector</h1>
+
+<p>An Euclidean vector is a geometric quantity having <strong>magnitude</strong> and <strong>direction</strong> expressed numerically as tuples <strong><code>[x0, x1, x2, ...]</code></strong>.</p>
+
+<hr><h2>
+<a name="-en-geometr%C3%ADa" class="anchor" href="#-en-geometr%C3%ADa"><span class="octicon octicon-link"></span></a>... en geometría</h2>
+
+<ul>
+<li><p>Un punto en el espacio</p></li>
+<li><p>Una dirección</p></li>
+<li><p>La separación entre dos puntos</p></li>
+<li><p>Un eje de giro</p></li>
+<li><p>Una rotación</p></li>
+<li><p>...</p></li>
+</ul><hr><h2>
+<a name="-en-matem%C3%A1ticas" class="anchor" href="#-en-matem%C3%A1ticas"><span class="octicon octicon-link"></span></a>... en matemáticas</h2>
+
+<p><strong>(espacio vectorial)</strong></p>
+
+<ul>
+<li><p>Suma y resta, vector nulo (<code>[0, 0, 0, ...]</code>)</p></li>
+<li><p>Multiplicación por un escalar</p></li>
+<li><p>Producto escalar</p></li>
+<li><p>En 3 dimensiones, producto vectorial</p></li>
+<li><p>Equivalencia con matrices 1xN (v. col.) o Nx1 (v. fila)</p></li>
+</ul><hr><h2>
+<a name="-en-perl" class="anchor" href="#-en-perl"><span class="octicon octicon-link"></span></a>... en Perl</h2>
+
+<ul>
+<li>Vector::Object3D (3D)</li>
+<li>Math::VectorReal (3D)</li>
+<li>Math::Vec (3D)</li>
+<li>Math::GSL::Vector</li>
+<li>y ...</li>
+</ul><hr><h2>
+<a name="-los-buenos" class="anchor" href="#-los-buenos"><span class="octicon octicon-link"></span></a>... Los buenos!</h2>
+
+<ul>
+<li>PDL</li>
+<li>Math::Vector::Real</li>
+</ul><hr><h2>
+<a name="pdl" class="anchor" href="#pdl"><span class="octicon octicon-link"></span></a>PDL</h2>
+
+<ul>
+<li><p>"Perl Data Language"</p></li>
+<li><p>Procesado de datos multidimensionales</p></li>
+<li><p>Muy eficiente (CPU y memoria)</p></li>
+<li><p>Inspirado en APL</p></li>
+</ul><hr><blockquote>
+<h2>
+<a name="apl" class="anchor" href="#apl"><span class="octicon octicon-link"></span></a>APL</h2>
+
+<ul>
+<li><p>"A Programming Language"</p></li>
+<li><p>196x</p></li>
+<li><p>datos multidimensionales</p></li>
+<li><p>estructuras de control implicitas</p></li>
+</ul>
+<p><img src="images/apl-keyboard.png"></p>
+</blockquote>
+
+<hr><blockquote>
+<h2>
+<a name="apl-ejemplos" class="anchor" href="#apl-ejemplos"><span class="octicon octicon-link"></span></a>APL, ejemplos</h2>
+
+<p>Números primos entre 1 y R:</p>
+
+<p><code>(~R∊R∘.×R)/R←1↓ιR</code></p>
+
+<p>Conway's Game of Life</p>
+
+<p><code>life←{↑1 ⍵∨.∧3 4=+/,¯1 0 1∘.⊖¯1 0 1∘.⌽⊂⍵}</code></p>
+</blockquote>
+
+<hr><blockquote>
+<h2>
+<a name="j" class="anchor" href="#j"><span class="octicon octicon-link"></span></a><a href="http://en.wikipedia.org/wiki/J_%28programming_language%29">J</a>
+</h2>
+
+<p>Variante moderna de APL</p>
+
+<p>Open Source</p>
+
+<p>ASCII</p>
+
+<p>Inspiración de los <a href="http://perl6advent.wordpress.com/2013/12/10/day-10-adverbly-adverby-adverbs/">adverbios</a> de Perl 6</p>
+</blockquote>
+
+<hr><h2>
+<a name="pdl-inconvenientes" class="anchor" href="#pdl-inconvenientes"><span class="octicon octicon-link"></span></a>PDL, inconvenientes</h2>
+
+<ul>
+<li><p>Curva de aprendizaje</p></li>
+<li><p>Soporta matrices, no vectores</p></li>
+<li><p>No intuitivo</p></li>
+<li><p>Es XS</p></li>
+</ul><hr><h2>
+<a name="mathvectorreal" class="anchor" href="#mathvectorreal"><span class="octicon octicon-link"></span></a>Math::Vector::Real</h2>
+
+<ul>
+<li><p>Aritmética con vectores n-dimensionales en el dominio de los números reales</p></li>
+<li><p>Fácil de usar e intuitivo</p></li>
+<li><p>Escrito en Perl puro</p></li>
+<li><p>Velocidad, objetivo secundario...</p></li>
+</ul><hr><h2>
+<a name="mathvectorrealxs" class="anchor" href="#mathvectorrealxs"><span class="octicon octicon-link"></span></a>Math::Vector::Real::XS</h2>
+
+<ul>
+<li><p>M::V::R reimplementado en XS</p></li>
+<li><p>Más rápido x5 ~ x10</p></li>
+<li>
+<p>Se carga automáticamente si esta instalado</p>
+
+<pre><code>use Math::Vector::Real;
+</code></pre>
+</li>
+<li><p>C API...</p></li>
+</ul><hr><blockquote>
+<h2>
+<a name="c-api" class="anchor" href="#c-api"><span class="octicon octicon-link"></span></a>C API</h2>
+
+<p>Problema: Tengo un módulo en XS (<code>M::S</code>) y quiero que otro módulo (<code>M::C</code>) tambien escrito en XS pueda utilizarlo</p>
+</blockquote>
+
+<hr><blockquote>
+<h2>
+<a name="c-api-1" class="anchor" href="#c-api-1"><span class="octicon octicon-link"></span></a>C API</h2>
+
+<ul>
+<li>
+<p>¿Donde esta el problema?</p>
+
+<p><code>M::C</code> puede usar <a href="https://metacpan.org/pod/distribution/perl/pod/perlcall.pod"><code>eval_pv</code></a>.</p>
+</li>
+<li>
+<p>Guardo en un hash (<code>%M::S::c_api</code>), punteros a las funciones C que quiero exportar. Desde <code>M::C</code>, recupero los punteros y los uso.</p>
+
+<p>Ejemplo: <a href="https://metacpan.org/pod/Time::HiRes#C-API">Time::HiRes</a>.</p>
+</li>
+<li><p>o...</p></li>
+</ul>
+</blockquote>
+
+<hr><blockquote>
+<h2>
+<a name="modulecapimaker" class="anchor" href="#modulecapimaker"><span class="octicon octicon-link"></span></a>Module::CAPIMaker</h2>
+
+<p>A partir de la declaración de las funciones que queremos exportar:</p>
+
+<pre><code>   int foo(double)
+   char *bar(void)
 </code></pre>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<p>Genera todo lo necesario para que las mismas se puedan utilizar transparentemente desde código XS en otros módulos.</p>
+</blockquote>
+
+<hr><blockquote>
+<h2>
+<a name="modulecapimaker-1" class="anchor" href="#modulecapimaker-1"><span class="octicon octicon-link"></span></a>Module::CAPIMaker</h2>
+
+<p>Lo usa</p>
+
+<ul>
+<li><p>Math::Int64</p></li>
+<li><p>Math::Int128</p></li>
+</ul>
+<p>No lo usa</p>
+
+<ul>
+<li>Math::Vector::Real::XS</li>
+</ul>
+</blockquote>
+
+<hr><h2>
+<a name="mathvectorreal-1" class="anchor" href="#mathvectorreal-1"><span class="octicon octicon-link"></span></a>Math::Vector::Real</h2>
+
+<pre><code>$u = V(1.7, 2.0); $v = V(-1, 3.2)
+
+$w = 7 * $u - $v + [0, 0.1];
+$s = $u * $w; # producto scalar
+$z = $u x $w; # producto vectorial
+
+$n = abs($u); # norma
+
+$v1 = $v-&gt;versor;
+</code></pre>
+
+<hr><blockquote>
+<h2>
+<a name="el-operador-x" class="anchor" href="#el-operador-x"><span class="octicon octicon-link"></span></a>El operador "x"</h2>
+
+<p>Bug <a href="https://rt.perl.org/Public/Bug/Display.html?id=121827">#121827</a> for perl5: overloading 'x' is broken</p>
+
+<pre><code>   scalar((...) x $a)
+</code></pre>
+</blockquote>
+
+<hr><h2>
+<a name="la-familia-mathvectorreal" class="anchor" href="#la-familia-mathvectorreal"><span class="octicon octicon-link"></span></a>La familia Math::Vector::Real</h2>
+
+<ul>
+<li>Math::Vector::Real</li>
+<li>Math::Vector::Real::XS</li>
+<li>Math::Vector::Real::Random</li>
+<li>Math::Vector::Real::kdTree</li>
+<li>Math::Vector::Real::Farthest</li>
+<li>Math::Vector::Real::MultiNormalMixture</li>
+<li>... y los ile<a href="https://github.com/salva?tab=repositories">git</a>imos!</li>
+</ul><hr><h2>
+<a name="mathvectorrealrandom" class="anchor" href="#mathvectorrealrandom"><span class="octicon octicon-link"></span></a>Math::Vector::Real::Random</h2>
+
+<ul>
+<li>
+<p>Generación de vectores aleatorios</p>
+
+<ul>
+<li><p>versores</p></li>
+<li><p>caja</p></li>
+<li><p>hiperesfera</p></li>
+<li><p>paralelotopo</p></li>
+<li><p>normal multivariante</p></li>
+</ul>
+</li>
+<li><p>Basado en Math::Random</p></li>
+</ul><hr><h2>
+<a name="mathvectorrealkdtree" class="anchor" href="#mathvectorrealkdtree"><span class="octicon octicon-link"></span></a>Math::Vector::Real::kdTree</h2>
+
+<ul>
+<li>
+<p>k-d tree</p>
+
+<p><img src="images/k-d_tree.png" align="right"></p>
+
+<ul>
+<li><p>estructura simple y muy versatil</p></li>
+<li>
+<p>busquedas n-dimensionales eficientes</p>
+
+<ul>
+<li><p><code>find_in_ball</code></p></li>
+<li><p><code>find_in_box</code></p></li>
+<li><p><code>nearest_vector</code></p></li>
+<li><p><code>farthest_vector</code></p></li>
+</ul>
+</li>
+<li>
+<p>otros algoritmos</p>
+
+<ul>
+<li>k-means</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>módulo "cerrado"</p></li>
+</ul><hr><h2>
+<a name="mathvectorreal-2" class="anchor" href="#mathvectorreal-2"><span class="octicon octicon-link"></span></a>Math::Vector::Real</h2>
+
+<p>Metodología de desarrollo: PDD</p>
+
+<hr><blockquote>
+<h2>
+<a name="pdd" class="anchor" href="#pdd"><span class="octicon octicon-link"></span></a>PDD</h2>
 
 <h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<a name="pique" class="anchor" href="#pique"><span class="octicon octicon-link"></span></a>Pique</h3>
 
 <h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<a name="driven" class="anchor" href="#driven"><span class="octicon octicon-link"></span></a>Driven</h3>
 
 <h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<a name="development" class="anchor" href="#development"><span class="octicon octicon-link"></span></a>Development</h3>
+</blockquote>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<hr><blockquote>
+<h2>
+<a name="pdd-1" class="anchor" href="#pdd-1"><span class="octicon octicon-link"></span></a>PDD</h2>
+
+<p>Alguien me pregunta por correo o en un foro como hacer algo y...</p>
+
+<ul>
+<li><p>a mi se me ocurre un metodo pero tengo que probarlo</p></li>
+<li><p>o se como hacerlo, lo explico, nadie lo entiende</p></li>
+<li><p>o con uno de mis módulos casi se puede resolver</p></li>
+</ul>
+<p>Entonces, ¡me pico y lo hago!</p>
+</blockquote>
+
+<hr><blockquote>
+<h2>
+<a name="pdd-ejemplo" class="anchor" href="#pdd-ejemplo"><span class="octicon octicon-link"></span></a>PDD, ejemplo:</h2>
+
+<ul>
+<li>
+<p>17 abril, Mr D.R.</p>
+
+<blockquote>
+<p>Is there any chance you have a method to calculate the largest distance between two vectors in a set?</p>
+</blockquote>
+</li>
+<li><p>25 abril: <code>Math::Vector::Real::Farthest</code> en CPAN</p></li>
+<li>
+<p>20 mayo, Mr D.R. otra vez:</p>
+
+<blockquote>
+<p>I hate to request [...] but I found an article describing an implementation of k-Means [...]</p>
+</blockquote>
+</li>
+<li><p>1 junio: nueva version de <code>Math::Vector::Real::kdTree</code> con soporte para k-means clustering.</p></li>
+</ul>
+</blockquote>
+
+<hr><h1>
+<a name="problemas" class="anchor" href="#problemas"><span class="octicon octicon-link"></span></a>Problemas</h1>
+
+<hr><h2>
+<a name="generaci%C3%B3n-de-clusters" class="anchor" href="#generaci%C3%B3n-de-clusters"><span class="octicon octicon-link"></span></a>Generación de clusters</h2>
+
+<p>Problema: Para validar un algoritmo, necesito generar un conjunto de
+puntos n-dimensionales que formen clusters "naturales".</p>
+
+<hr><h3>
+<a name="soluci%C3%B3n-1-metodo-constructivista" class="anchor" href="#soluci%C3%B3n-1-metodo-constructivista"><span class="octicon octicon-link"></span></a>Solución 1: Metodo constructivista</h3>
+
+<ol>
+<li><p>De manera ingeniosa me invento una función parametrizable
+(u objeto) que sea capaz de generar "clusters".</p></li>
+<li><p>Combino varios de estos clusters mediante una parametrización aleatoria.</p></li>
+</ol><p>Ejemplo:</p>
+
+<pre><code>my @sphere = map {
+        my $center = Math::Vector::Real-&gt;random_in_box(3, 1.0);
+        my $radius = rand(0.5);
+        Sphere-&gt;new($center, $radius)
+    } 1..$M;
+
+my @v = map { $sphere[rand($M)]-&gt;random_point } 1..$size;
+</code></pre>
+
+<hr><h3>
+<a name="soluci%C3%B3n-1-m%C3%A9todo-constructivista" class="anchor" href="#soluci%C3%B3n-1-m%C3%A9todo-constructivista"><span class="octicon octicon-link"></span></a>Solución 1: Método constructivista</h3>
+
+<p>Limitaciones:</p>
+
+<ul>
+<li><p>Los datos generados siguen un patrón</p></li>
+<li><p>Los clusters generados no cumplen la condición de "naturales"</p></li>
+</ul><hr><p><img src="images/density-function.png" align="right"></p>
 
 <h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+<a name="soluci%C3%B3n-2-metodo-probabil%C3%ADstico" class="anchor" href="#soluci%C3%B3n-2-metodo-probabil%C3%ADstico"><span class="octicon octicon-link"></span></a>Solución 2: Metodo probabilístico:</h3>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<ol>
+<li><p>Elijo una función de densidad de probabilidad
+n-dimensional <code>f($v)</code></p></li>
+<li><p>Utilizo esa función para generar puntos aleatorios</p></li>
+</ol><p>Ejemplo (<a href="http://en.wikipedia.org/wiki/Rejection_sampling">Rejection sampling</a>):</p>
+
+<pre><code>    while (@p &lt; $size) {
+        my $v = Math::Vector::Real-&gt;random_in_box($dim, 1);
+        if (rand($max_f) &lt; f($v)) {
+            push @p, $v;
+        }
+    }
+</code></pre>
+
+<hr><h3>
+<a name="soluci%C3%B3n-2-m%C3%A9todo-probabil%C3%ADstico" class="anchor" href="#soluci%C3%B3n-2-m%C3%A9todo-probabil%C3%ADstico"><span class="octicon octicon-link"></span></a>Solución 2: Método probabilístico</h3>
+
+<p>Limitaciones:</p>
+
+<ul>
+<li><p>La probabilidad de descarte puede ser muy alta (*)</p></li>
+<li><p>No deja de ser una variante del metodo constructivista</p></li>
+</ul><hr><h3>
+<a name="soluci%C3%B3n-3-m%C3%A9todo-inspirado" class="anchor" href="#soluci%C3%B3n-3-m%C3%A9todo-inspirado"><span class="octicon octicon-link"></span></a>Solución 3: Método "inspirado"</h3>
+
+<ol>
+<li><p>Creo una funcion de densidad de probabilidad a partir de otros datos de origen externo</p></li>
+<li><p>Utilizo esa función para generar puntos aleatorios</p></li>
+</ol><hr><h3>
+<a name="soluci%C3%B3n-3-m%C3%A9todo-inspirado-1" class="anchor" href="#soluci%C3%B3n-3-m%C3%A9todo-inspirado-1"><span class="octicon octicon-link"></span></a>Solución 3: Método "inspirado"</h3>
+
+<p>Ejemplo:</p>
+
+<ol>
+<li>Busco una imagen en Google</li>
+<li>La utilizo para generar una función de distribución bidimensional</li>
+<li>Genero puntos según esa distribución</li>
+</ol><p><img src="images/gato.png"></p>
+
+<hr><p><a href="https://github.com/salva/p5-Tie-Array-Packed/blob/master/sample/image2rand.pl">image2rand.pl</a></p>
+
+<pre><code>tie my(@acu), 'Tie::Array::Packed::DoubleNative';
+
+for my $j (0..$height-1) {
+    for my $i (0..$width-1) {
+        my @c = $img-&gt;GetPixel(x =&gt; $i, y =&gt; $j);
+        my $c = ($c[2]*$c[2]+$c[1]*$c[1]+$c[0]*$c[0]) ** $exp;
+        push @acu, $acu[-1] + $c;
+    }
+}
+
+my $top = $acu[-1];
+my $ref = tied(@acu);
+for my $r (random_uniform($n, 0, $top)) {
+    my $ix = $ref-&gt;bsearch_le($r);
+    my $j = int($ix / $width);
+    my $i = $ix - $j * $width;
+    $out-&gt;SetPixel(x =&gt; $i, y =&gt; $j, color =&gt; [1, 1, 1]);
+}
+</code></pre>
+
+<hr><h3>
+<a name="soluci%C3%B3n-3-m%C3%A9todo-inspirado-2" class="anchor" href="#soluci%C3%B3n-3-m%C3%A9todo-inspirado-2"><span class="octicon octicon-link"></span></a>Solución 3: Método "inspirado"</h3>
+
+<p>Limitaciones:</p>
+
+<ul>
+<li>Dificultad de obtener datos externos</li>
+<li>Calidad de los datos externos</li>
+<li>Escala mal (dimensión, resolución)</li>
+</ul><hr><blockquote>
+<h2>
+<a name="tiearraypacked" class="anchor" href="#tiearraypacked"><span class="octicon octicon-link"></span></a>Tie::Array::Packed</h2>
+
+<ul>
+<li><p>Arrays densos en Perl</p></li>
+<li><p>Reduce el consumo de memoria un orden de magnitud</p></li>
+<li><p>Implementado en XS (pero la interfaz <code>tie</code> es lenta)</p></li>
+<li><p>Algunos métodos interesantes (ordenación, busqueda binaria, etc.)</p></li>
+</ul>
+<p><img src="images/illguts-av.png"> Vs <img src="images/illguts-svpv.png"></p>
+</blockquote>
+
+<hr><h2>
+<a name="generaci%C3%B3n-de-clusters-1" class="anchor" href="#generaci%C3%B3n-de-clusters-1"><span class="octicon octicon-link"></span></a>Generación de clusters</h2>
+
+<p>¿Más?</p>
+
+<hr><p><img src="images/termite_hill.jpg" align="right"></p>
+
+<h3>
+<a name="soluci%C3%B3n-4-m%C3%A9todo-emergente" class="anchor" href="#soluci%C3%B3n-4-m%C3%A9todo-emergente"><span class="octicon octicon-link"></span></a>Solución 4: Método emergente</h3>
+
+<ul>
+<li><p>Pasar horas y horas creando una arquitectura de agentes cuyo comportamiento emergente genere clusters</p></li>
+<li><p>AI::Termites</p></li>
+</ul><hr><p><code>mplayer 'mf://images/termites/*.png' -mf fps=10 -fs</code></p>
+
+<hr><h3>
+<a name="soluci%C3%B3n-4-m%C3%A9todo-emergente-1" class="anchor" href="#soluci%C3%B3n-4-m%C3%A9todo-emergente-1"><span class="octicon octicon-link"></span></a>Solución 4: Método emergente</h3>
+
+<p>Limitaciones</p>
+
+<ul>
+<li><p>Lento</p></li>
+<li><p>Podría haber un patrón oculto</p></li>
+</ul><hr><h2>
+<a name="generaci%C3%B3n-de-clusters-2" class="anchor" href="#generaci%C3%B3n-de-clusters-2"><span class="octicon octicon-link"></span></a>Generación de clusters</h2>
+
+<p>PDD:</p>
+
+<ul>
+<li><p><a href="http://perlmonks.org/?node_id=908684">3D test data that exhibits clustering?</a></p></li>
+<li><p><a href="http://perlmonks.org/?node_id=1065851">Randomly biased, random numbers</a></p></li>
+</ul><hr><p><img src="images/cover.png" align="right"></p>
+
+<h2>
+<a name="recubrimiento" class="anchor" href="#recubrimiento"><span class="octicon octicon-link"></span></a>Recubrimiento</h2>
+
+<p>Problema: dado un conjunto de puntos N-dimensionales <code>A</code> y un
+parametro radio <code>$r</code>, encontrar un subconjunto mínimo del mismo <code>R</code>
+tal que para cualquier punto de <code>A</code> exista un punto en <code>R</code> a una
+distancia menor que <code>$r</code>.</p>
+
+<hr><h3>
+<a name="soluci%C3%B3n-1-fuerza-bruta" class="anchor" href="#soluci%C3%B3n-1-fuerza-bruta"><span class="octicon octicon-link"></span></a>Solución 1: Fuerza bruta</h3>
+
+<ul>
+<li><p>Garantiza solución globalmente óptima</p></li>
+<li><p>Complejidad exponencial (probablemente NP-hard)</p></li>
+<li><p>En la práctica no es viable</p></li>
+</ul><hr><h3>
+<a name="soluci%C3%B3n-2-m%C3%A9todo-del-m%C3%A1ximo-gradiente" class="anchor" href="#soluci%C3%B3n-2-m%C3%A9todo-del-m%C3%A1ximo-gradiente"><span class="octicon octicon-link"></span></a>Solución 2: Método del máximo gradiente</h3>
+
+<p>Repetidamente elegimos el punto cuya bola cubra más elementos:</p>
+
+<pre><code>use Sort::Key::Top qw(ikeytail);
+my @R;
+while (@A) {
+  my $best = ikeytail { count_in_ball($_, $r, \@A) } @A;
+  push @R, $best;
+  @A = grep { $best-&gt;dist($_) &gt; $r } @A;
+}
+</code></pre>
+
+<hr><h3>
+<a name="soluci%C3%B3n-2-m%C3%A9todo-del-m%C3%A1ximo-gradiente-1" class="anchor" href="#soluci%C3%B3n-2-m%C3%A9todo-del-m%C3%A1ximo-gradiente-1"><span class="octicon octicon-link"></span></a>Solución 2: Método del máximo gradiente</h3>
+
+<ul>
+<li><p>Simple y rápido</p></li>
+<li><p>La solución suele ser buena, aunque no siempre</p></li>
+</ul><hr><blockquote>
+<h2>
+<a name="sortkeytop" class="anchor" href="#sortkeytop"><span class="octicon octicon-link"></span></a>Sort::Key::Top</h2>
+
+<ul>
+<li>
+<p>Selecciona el top-X de una lista</p>
+
+<pre><code>@a = keytop { key($_) } $X =&gt; @data;
+
+# @a = (sort { key($a) cmp key($b) } @data)[0..$X-1]
+</code></pre>
+</li>
+<li><p><a href="http://en.wikipedia.org/wiki/Selection_algorithm">Algoritmo de selección</a></p></li>
+<li><p>XS, muy rápido</p></li>
+<li><p>Multiples variantes (¡demasiadas!)</p></li>
+</ul>
+</blockquote>
+
+<hr><h3>
+<a name="soluci%C3%B3n-3-algoritmo-gen%C3%A9tico" class="anchor" href="#soluci%C3%B3n-3-algoritmo-gen%C3%A9tico"><span class="octicon octicon-link"></span></a>Solución 3: Algoritmo genético</h3>
+
+<ul>
+<li><p>Seleccionamos un conjunto de soluciones diversas y no optimas</p></li>
+<li><p>Las cruzamos y mutamos</p></li>
+<li><p>Jugamos a la ruleta (cargada) con ellas</p></li>
+<li><p>Repetimos</p></li>
+</ul><hr><h3>
+<a name="algorithmgaul" class="anchor" href="#algorithmgaul"><span class="octicon octicon-link"></span></a>Algorithm::GAUL</h3>
+
+<ul>
+<li>
+<p>wrapper GAUL: <a href="http://gaul.sourceforge.net/">The Genetic Algorithm Utility Library</a></p>
+
+<p><img src="images/gaul_logo.jpeg" align="right"></p>
+
+<ul>
+<li>C</li>
+<li>rapida</li>
+<li>flexible</li>
+<li>parallela (hilos, MPI, ...)</li>
+<li>abandonada (2009)</li>
+</ul>
+</li>
+<li><p><a href="https://github.com/salva/p5-AI-GAUL">en progreso</a>... por siempre</p></li>
+</ul><hr><pre><code>my $gaul = Algorithm::GAUL-&gt;new(len_chromo =&gt; scalar(@p),
+                                population_size =&gt; $pop_size,
+                                select_two =&gt; 'random',
+                                select_one =&gt; 'aggresive',
+                                mutation_ratio =&gt; 0.20,
+                                seed =&gt; \&amp;seed,
+                                evaluate =&gt; \&amp;weight,
+                                adapt =&gt; \&amp;repair,
+                                stop =&gt; \&amp;stop,
+                                mutate =&gt; \&amp;mutate,
+                                elitism =&gt; 'parents_survive',
+                                scheme =&gt; 'lamarck_children',
+                                crossover =&gt; \&amp;crossover);
+ while (...) {
+     $gaul-&gt;evolution(1);
+     my $s = $gaul-&gt;entity_by_rank(0)-&gt;[0];
+     ...
+ }
+</code></pre>
+
+<hr><pre><code>sub crossover {
+    # say "crossing...";
+    my $s = \$_[3][0];
+    my $d = \$_[4][0];
+    my $p = $_[1][0];
+    my $m = $_[2][0];
+
+    my $z = $b0 + $db-&gt;random_in_box;
+    my $d2 = rand($diam);
+    $d2 *= $d2;
+    for my $ix (0..$#p) {
+        if ($z-&gt;dist2($p[$ix]) &lt; $d2) {
+            vec($$s, $ix, 1) = vec($p, $ix, 1);
+            vec($$d, $ix, 1) = vec($m, $ix, 1);
+        }
+        else {
+            vec($$s, $ix, 1) = vec($m, $ix, 1);
+            vec($$d, $ix, 1) = vec($p, $ix, 1);
+        }
+    }
+}
+</code></pre>
+
+<hr><pre><code>sub repair {
+    # say "repairing chromosomes";
+    for my $s (@{$_[1]}) {
+        my $m = $missing;
+        my $ix = -1;
+        while (defined($ix = bu_first($s, $ix + 1))) {
+            vec($m, $_, 1) = 0 for @{$cover[$ix]};
+        }
+        $ix = -1;
+        while (defined($ix = bu_first($m, $ix + 1))) {
+            my $r = $cover[$ix][rand scalar @{$cover[$ix]}];
+            vec($s, $r, 1) = 1;
+            vec($m, $_, 1) = 0 for @{$cover[$r]};
+        }
+    }
+}
+</code></pre>
+
+<hr><p><code>mplayer 'mf://images/cover/*.png' -mf fps=10 -fs</code></p>
+
+<hr><h2>
+<a name="soluci%C3%B3n-3-algoritmo-gen%C3%A9tico-1" class="anchor" href="#soluci%C3%B3n-3-algoritmo-gen%C3%A9tico-1"><span class="octicon octicon-link"></span></a>Solución 3: Algoritmo genético</h2>
+
+<ul>
+<li>
+<p>Dificil saber que esta pasando</p>
+
+<ul>
+<li><p>visualización</p></li>
+<li><p>ajuste del algoritmo</p></li>
+</ul>
+</li>
+<li><p>Dificil mutar y cruzar conservando calidad de la solución</p></li>
+</ul><hr><blockquote>
+<h1>
+<a name="bitutil" class="anchor" href="#bitutil"><span class="octicon octicon-link"></span></a>Bit::Util</h1>
+
+<ul>
+<li>
+<p>Funciones para manipular un vector de bits</p>
+
+<ul>
+<li><p>busqueda (<code>bu_first</code>, <code>bu_last</code>)</p></li>
+<li><p>conteo (<code>bu_count</code>)</p></li>
+</ul>
+</li>
+<li><p>en progreso (2012)</p></li>
+<li><p>XS</p></li>
+<li><p>pero código C sin optimizar</p></li>
+</ul>
+</blockquote>
+
+<hr><p><img src="images/escher-circle-limit.jpg" align="right"></p>
+
+<h2>
+<a name="cubrimiento-aleatorio-del-plano" class="anchor" href="#cubrimiento-aleatorio-del-plano"><span class="octicon octicon-link"></span></a>Cubrimiento aleatorio del plano</h2>
+
+<p>Ploblema: A partir de una figura geometrica básica (triangulo,
+cuadrado, circulo, etc.), llenar el plano posicionando la misma de
+manera repetida y aleatoria.</p>
+
+<hr><p><img src="images/filling-holes.png" align="right" width="50%"></p>
+
+<h2>
+<a name="cubrimiento-aleatorio-del-plano-1" class="anchor" href="#cubrimiento-aleatorio-del-plano-1"><span class="octicon octicon-link"></span></a>Cubrimiento aleatorio del plano</h2>
+
+<ul>
+<li>
+<p>Subproblemas</p>
+
+<ul>
+<li><p>¿Como buscar un agujero sin llenar?</p></li>
+<li><p>¿Que cabe en el agujero?</p></li>
+</ul>
+</li>
+</ul><hr><h2>
+<a name="mathgeometryrandomplanefiller" class="anchor" href="#mathgeometryrandomplanefiller"><span class="octicon octicon-link"></span></a>Math::Geometry::RandomPlaneFiller</h2>
+
+<ul>
+<li><p>Usa una estructura de k-d tree para particionar el plano (2D)</p></li>
+<li>
+<p>Para buscar agujeros</p>
+
+<ul>
+<li><p>Cada region tiene una probabilidad asignada proporcional al área aun libre</p></li>
+<li><p>Cuando se añade una figura nueva se reajustan las probabilidades</p></li>
+</ul>
+</li>
+<li>
+<p>Para medir agujeros (rater)</p>
+
+<ul>
+<li>Enumera las figuras existentes ordenadas en base a una metrica parametrizable</li>
+</ul>
+</li>
+<li>
+<p><a href="https://github.com/salva/p5-Math-Geometry-RandomPlaneFiller">En progreso</a></p>
+
+<ul>
+<li>Solo implementado el soporte para circulos</li>
+</ul>
+</li>
+</ul><hr><p><code>mplayer 'mf://images/random-plane-filler/*.png' -mf fps=10 -fs</code></p>
+
+<hr><h1>
+<a name="fin" class="anchor" href="#fin"><span class="octicon octicon-link"></span></a>FIN</h1>
       </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Perl y Geometría maintained by <a href="https://github.com/salva">salva</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/salva">salva</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
       </footer>
     </div>
-
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
     
-
   </body>
 </html>
